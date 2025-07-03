@@ -9,7 +9,7 @@ export default function Component() {
       <div className="absolute inset-0 pointer-events-none">
         {/* Large animated oval outline */}
         <OvalMovingAnim
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 mix-blend-difference"
           rx={400}
           ry={200}
           stroke="#374151"

@@ -1,16 +1,17 @@
 "use client";
 
 import { motion, useAnimationFrame } from "motion/react";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 
 interface Props {
   className?: string;
-  r?: number; // bán kính hình tròn
+  r?: number;
   stroke?: string;
   strokeWidth?: number;
   opacity?: number;
-  rx?: number; // bán trục lớn của path elip
-  ry?: number; // bán trục nhỏ của path elip
+  rx?: number;
+  ry?: number;
+  text?: string;
 }
 
 export default function OvalMovingAnim({
@@ -19,19 +20,12 @@ export default function OvalMovingAnim({
   stroke = "#374151",
   strokeWidth = 1,
   opacity = 0.3,
-  rx = 100,
-  ry = 50,
+  rx = 300,
+  ry = 200,
+  text = "RADIATE",
 }: Props) {
   const circleRef = useRef<SVGCircleElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
-  const [pathBounds, setPathBounds] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    if (pathRef.current) {
-      const bbox = pathRef.current.getBBox();
-      setPathBounds({ width: bbox.width, height: bbox.height });
-    }
-  }, []);
 
   useAnimationFrame((time: number) => {
     if (circleRef.current && pathRef.current) {
@@ -69,13 +63,15 @@ export default function OvalMovingAnim({
         fill="none"
         opacity={opacity}
       />
+
+      {/* Chữ trắng hiển thị ở ngoài SVG hoặc trong DOM, không vẽ ở đây  */}
+
+      {/* Hình tròn trắng; dùng blend-mode difference để lật màu khi đè lên chữ trắng */}
       <motion.circle
         ref={circleRef}
         r={r}
-        fill="none"
-        stroke={stroke}
-        strokeWidth={strokeWidth}
-        opacity={opacity}
+        fill="#ffffff"
+        stroke="none"
         initial={false}
       />
     </svg>
