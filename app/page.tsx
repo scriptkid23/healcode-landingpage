@@ -28,7 +28,7 @@ export default function Component() {
 
       {/* Header */}
       <header className="relative z-10 flex justify-between items-center p-6 md:p-8">
-        <div className="text-xl font-bold tracking-wider">ORBIT</div>
+        <div className="text-xl font-bold tracking-wider">CLARIS</div>
         <nav className="hidden md:flex space-x-8 text-sm tracking-wider">
           <a href="#" className="hover:text-pink-400 transition-colors">
             WORKS
@@ -46,22 +46,22 @@ export default function Component() {
       <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6">
         <div className="text-center max-w-4xl">
           {/* Top text */}
-          <div className="text-lg md:text-xl tracking-widest mb-4 opacity-80">WHERE IDEAS</div>
+          <div className="text-lg md:text-xl tracking-widest mb-4 opacity-80">FROM</div>
 
           {/* Main heading */}
           <div className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none mb-2">
-            <div>RASIO</div>
-            <div>NATE</div>
+            <div className="uppercase">Imper</div>
+            <div className="uppercase">fections</div>
           </div>
 
           {/* Subtitle */}
-          <div className="text-sm md:text-base tracking-widest mb-6 opacity-80">IT WILL COME</div>
+            <div className="text-sm md:text-base tracking-widest mb-6 opacity-80">TO</div>
 
-          {/* Secondary heading */}
-          <div className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-12">
-            <div>RADI</div>
+            {/* Secondary heading */}
+            <div className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-12">
+            <div>BRILL</div>
             <div className="flex items-center justify-center">
-              <span>—ATE</span>
+              <span>—IANCE</span>
             </div>
           </div>
 
